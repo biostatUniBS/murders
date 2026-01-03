@@ -1,5 +1,5 @@
 ---
-title: "Report on Gun Murders"
+title: "Report: omicidi con arma da fuoco (Gun Murders)"
 author: "Stefano Calza"
 date: "`r format(Sys.Date())`"
 output: github_document
@@ -9,25 +9,25 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Introduction
+## Introduzione
 
-This is a report on 2010 gun murder rates obtained from FBI reports. The original data was obtained from [this Wikipedia page](https://en.wikipedia.org/wiki/Murder_in_the_United_States_by_state).
+Questo è un report sui tassi di omicidi con armi da fuoco del 2010, ottenuto dai rapporti dell'FBI. I dati originali sono stati ottenuti da [this Wikipedia page](https://en.wikipedia.org/wiki/Murder_in_the_United_States_by_state).
 
-We are going to use the following library:
+Utilizziamo la seguente library:
 
 ```{r loading-libs, message=FALSE}
 library(tidyverse)
 ```
   
-and load the data we already wrangled:
+e carichiamo i dati già ripuliti e trasformati (*wrangled*):
 
 ```{r}
 load("rdas/murders.rda")
 ```
 
-## Murder rate by state 
+## Tasso di omicidi per stato
 
-We note the large state to state variability by generating a barplot showing the murder rate by state:
+Notiamo l'ampia variabilità da stato a stato generando un grafico a barre che mostra il tasso di omicidi per stato:
 
 ```{r murder-rate-by-state, echo=FALSE}
 murders %>% mutate(abb = reorder(abb, rate)) %>%
