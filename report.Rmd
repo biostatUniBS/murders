@@ -1,6 +1,6 @@
 ---
 title: "Report on Gun Murders"
-author: "Rafael Irizarry"
+author: "Stefano Calza"
 date: "`r format(Sys.Date())`"
 output: github_document
 ---

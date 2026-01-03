@@ -1,6 +1,6 @@
 ---
 title: "Report on Gun Murders"
-author: "Rafael Irizarry"
+author: "Stefano Calza"
 format: gfm
 ---
 
